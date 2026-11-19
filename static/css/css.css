@@ -108,9 +108,10 @@ along with this program.  If not, see https://www.gnu.org/licenses/.
 :root {
 	--text-color: #000000;
 	--text-color-reverse: #f5f5dc;
+	--svg-color: #6587B8;
 	--text-background: rgba(70, 70, 70, .25);
     --mpicon-opacity: 0.3;
-	--background-photo: url('../img/backgrounds/background-9.webp'); /*2，3，6，9*/
+	--background-photo: url('../img/backgrounds/background-6.webp'); /*2，3，6，9*/
 	--music-progress-color: #000b;
 	--music-progress-color-hover: #000;
 	--music-progress-background: rgba(0, 0, 0, 0.2); }
@@ -119,6 +120,7 @@ along with this program.  If not, see https://www.gnu.org/licenses/.
 html.dark-mode {
 	--text-color: #f5f5dc;
 	--text-color-reverse: #000000;
+	--svg-color: #f5f5dc;
 	--text-background: rgba(250, 250, 250, 0.5);
 	--mpicon-opacity: 0.4;
 	--background-photo: url('../img/backgrounds/background-17.webp');
@@ -851,7 +853,7 @@ html.dark-mode .bold-color-reverse {
 	font-size: 17px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: var(--text-color-reverse);
+	color: var(--svg-color);
 	transition: all 0.3s ease-in-out; }
 
 #title-page .music-page-button::after,
@@ -870,13 +872,13 @@ html.dark-mode .bold-color-reverse {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	color: var(--text-color-reverse);
 	z-index: -1; 
 	transition: all 0.3s ease-in-out; }
 
 #title-page .music-svg circle,
 #title-page .time-svg circle {
-	stroke: var(--text-color-reverse); }
+	stroke: var(--svg-color);
+	opacity: 0.7; }
 
 #title-page .music-svg,
 #title-page .music-page-button {
@@ -890,19 +892,20 @@ html.dark-mode .bold-color-reverse {
     top: 50%;
     transform: translate(-50%, -50%); }
 
-#title-page:has(.music-page-button:hover) .music-svg,
 #title-page:has(.music-page-button:hover) .music-page-button,
-#title-page:has(.time-page-button:hover) .time-svg,
-#title-page:has(.time-page-button:hover) .time-page-button {
-  transform: translate(-50%, -50%) scale(1.09);
-  transform-origin: center; }
+#title-page:has(.time-page-button:hover) .time-page-button,
+#title-page:has(.music-page-button:hover) .music-svg,
+#title-page:has(.time-page-button:hover) .time-svg {
+	transform: translate(-50%, -50%) scale(1.09);
+	transform-origin: center;
+	opacity: 1; }
 
 #title-page:has(.music-page-button:active) .music-svg,
 #title-page:has(.music-page-button:active) .music-page-button,
 #title-page:has(.time-page-button:active) .time-svg,
 #title-page:has(.time-page-button:active) .time-page-button {
-  transform: translate(-50%, -50%) scale(.94);
-  transform-origin: center; }
+	transform: translate(-50%, -50%) scale(.94);
+	transform-origin: center; }
 
 #time-page {
 	display: flex;
