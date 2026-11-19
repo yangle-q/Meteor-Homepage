@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!-- 
+Meteor Homepage
+Copyright (C) 2026 Yangle
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see https://www.gnu.org/licenses/.
+-->
+<html>
+
+<head>
+	<script>
+    (() => {
+        const theme = localStorage.getItem('theme');
+        const html = document.documentElement;
+
+        if (theme === 'dark') {
+            html.classList.add('dark-mode');
+        } else if (theme === 'light') {
+            html.classList.remove('dark-mode');
+        }
+    })();
+	
+    </script>
+	<title>Yangle's Homepage | 20100807.xyz</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base target="_blank">
+	<link href="static/css/css.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+</head>
+
+<body id="mainpage-body">
+<div class="body-page no-format">
+
+	<nav id="nav-pc">
+		<ul class="nav">
+			<li title="Home"><a href="/" target="_self"><i class="fa-solid fa-house navicon"></i><span>Home</span></a></li>
+			<li><a href="info" target="_self"><i class="fa-solid fa-address-card navicon"></i><span>My Information</span></a></li>
+			<li><a href="projects" target="_self"><i class="fa-solid fa-bars-progress navicon"></i><span>My Projects</span></a></li>
+			<li><a href="message" target="_self"><i class="fa-brands fa-signal-messenger navicon"></i><span>Message Board</span></a></li>
+			<li><a href="contact" target="_self"><i class="fa-solid fa-address-card navicon"></i><span>Contact Me</span></a></li>
+			<li><button class="no-format" id="theme-toggle"><i class="fa-solid fa-sun"></i></button></li>
+		</ul>
+	</nav>
+
+	<nav id="nav-mobile" class="no-format">
+		<div id="nav-mobile-header" class="no-format">
+
+			<div id="nav-info" class="no-click">
+				<a href="/" target="_self"><i class="fa-solid fa-house"></i></a>
+				<span>Meteor Homepage</span>
+				<li><button class="no-format" id="theme-toggle-mobile"><i class="fa-solid fa-sun"></i></button></li>
+				<i class="fa-solid fa-bars"></i>
+			</div>
+
+			<div id="nav-mobile-content" class="no-click">
+				<ul>
+					<li><a href="/" target="_self"><i class="fa-solid fa-house"></i>Home<i class="fa-solid fa-angle-right"></i></a></li>
+					<li><a href="info" target="_self"><i class="fa-solid fa-circle-info"></i>My Information<i class="fa-solid fa-angle-right"></i></a></li>
+					<li><a href="projects" target="_self"><i class="fa-solid fa-bars-progress"></i>My Projects<i class="fa-solid fa-angle-right"></i></a></li>
+					<li><a href="message" target="_self"><i class="fa-brands fa-signal-messenger"></i>Message Board<i class="fa-solid fa-angle-right"></i></a></li>
+					<li><a href="contact" target="_self"><i class="fa-solid fa-address-card"></i>Contact Me<i class="fa-solid fa-angle-right"></i></a></li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>	
+
+	<header>
+		<img src="static/img/avatar.webp" alt="avatar" id="avatar">
+
+		<div class="infotable no-click">
+			<h1 class="bold-color-reverse" id="name">CHRISTIAN</h1>
+			<ul id="basic-info">
+				<li class="no-format"><i class="fa-solid fa-location-dot"></i>China-ShangHai</li>
+				<li class="no-format"><i class="fa-solid fa-school"></i>Wenli International School</li>
+				<li class="no-format"><i class="fa-solid fa-scroll"></i>The sky is just a bottle of Orange-flavored lemon soda.</li>
+			</ul>
+		</div>
+
+	</header>
+
+	<main>
+		<div class="no-click" id="top-bar">
+
+			<div class="no-format" id="music-page">
+				<img id="music-cover" src="static/music/Asahi/Cover-Asahi.png">
+
+				<div class="no-format" id="music-infos">
+					<p id="music-name">あさひ</p>
+					<p id="music-author">花譜/佐倉綾音</p>
+				</div>
+
+				<audio id="bgm" src="https://drive.lemonstar.me/raw/%E6%94%BE%E7%82%B9%E7%88%B1%E5%90%AC%E7%9A%84%E6%AD%8C/%E3%81%82%E3%81%95%E3%81%B2.mp3"></audio>
+
+				<div class="no-format" id="music-controls">
+					
+					<div class="no-format" id="progress-wrap">
+						<input type="range" id="music-progress" value="0" max="100">
+						<span class="music-time" id="current-time">0:00</span>
+						<span class="music-time" id="total-time">0:00</span>
+					</div>
+
+					<div class="no-format" id="music-control-buttons">
+						<i class="fa-solid fa-volume volume-button"></i>
+						<i class="fa-solid fa-backward-step previous-button"></i>
+						<i class="fa-solid fa-play play-button"></i>
+						<i class="fa-solid fa-forward-step next-button"></i>
+						<i class="fa-solid fa-circle-chevron-left back-button"></i>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="no-format" id="title-page">
+
+				<svg class="music-svg svg-progress" viewBox="0 0 120 120" width="150">
+					<circle
+						cx="60"
+						cy="60"
+						r="19"
+						fill="none"
+						stroke="black"
+						stroke-width="4"
+						stroke-dasharray="100 0"
+						transform="rotate(-90 60 60)"
+						pathLength="100"
+						stroke-linecap="round"
+					/>
+				</svg>
+
+				<svg class="music-svg svg-volume" viewBox="0 0 120 120" width="150">
+					<circle
+						cx="60"
+						cy="60"
+						r="12"
+						fill="none"
+						stroke="black"
+						stroke-width="4"
+						stroke-dasharray="100 0"
+						transform="rotate(-90 60 60)"
+						pathLength="100"
+						stroke-linecap="round"
+					/>
+				</svg>
+
+				<i class="fa-solid fa-headphones music-page-button"></i>
+
+				<div class="no-click bold-color" id="website-title"><p>Meteor Homepage</p></div>
+
+				<i class="fa-solid fa-clock time-page-button"></i>
+
+				<svg class="time-svg svg-hour" viewBox="0 0 120 120" width="150">
+					<circle
+						cx="60"
+						cy="60"
+						r="19"
+						fill="none"
+						stroke="black"
+						stroke-width="4"
+						stroke-dasharray="70 30"
+						transform="rotate(-90 60 60)"
+						pathLength="100"
+						stroke-linecap="round"
+					/>
+				</svg>
+
+				<svg class="time-svg svg-minute" viewBox="0 0 120 120" width="150">
+					<circle
+						cx="60"
+						cy="60"
+						r="12"
+						fill="none"
+						stroke="black"
+						stroke-width="4"
+						stroke-dasharray="100 0"
+						transform="rotate(-90 60 60)"
+						pathLength="100"
+						stroke-linecap="round"
+					/>
+				</svg>
+				
+			</div>
+
+			<div class="no-format" id="time-page">
+
+				<div class="no-format" id="date-wrap">
+					<p id="dates-wrap"><span id="date">01</span>/<span id="month">01</span>/<span id="year">2026</span></p>
+					<p id="day">Monday</p>
+					<p id="greeting">Welcome!</p>
+				</div>
+
+				<p class="" id="time">
+					<span id="hour">12</span>:<span id="minute">00</span>:<span id="second">00</span>
+				</p>
+
+				<div class="no-format" id="time-page-right">
+					<p>Weather:	&nbsp;<span id="weather-condition">- - °C</span></p>
+					<p><span id="this-year">2026</span> has passed: &nbsp;<span id="this-year-progress">0%</span></p>
+					<p>⚡ <span id="delay">0ms</span></p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="span-1x2 jello">
+			<a href="https://lemonstar.me">
+				<p>My Homepage</p>
+				<i class="fa-solid fa-house mpicon"></i>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-2x1 fade">
+			<a href="https://blog.lemonstar.me">
+				<p>My Blog</p>
+				<i class="fa-solid fa-blog mpicon"></i>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-2x1 spin">
+			<a href="https://ai.lemonstar.me">
+				<p>Lemonstar AI</p>
+				<i class="fa-brands fa-openai mpicon"></i>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-1x1 float">
+			<a href="https://blog.lemonstar.me/gallery">
+				<p>Gallery</p>
+				<i class="fa-solid fa-images mpicon"></i>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-2x1 fade">
+			<a href="https://jingyingying.lemonstar.me">
+				<p>Jing YingYing's Blog</p>
+				<i class="fa-solid fa-blog mpicon"></i>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-1x2 spin">
+			<a href="https://blog.lemonstar.me/music">
+				<p>My Music List</p>
+				<i class="fa-solid fa-compact-disc mpicon"></i>
+				<article>
+				
+				</article>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-2x1 flip-360">
+			<a href="https://bangumi.tv/anime/list/yangle_q/collect">
+				<p>My Bangumi List</p>
+				<i class="fa-brands fa-bilibili mpicon"></i>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-1x1 bounce">
+			<a href="https://hellofrom.20100807.xyz">
+				<p>HelloFrom.</p>
+				<i class="fa-solid fa-globe mpicon"></i>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-1x1 beat-fade">
+			<a href="contact">
+				<p>Contact Me</p>
+				<i class="fa-solid fa-address-card mpicon"></i>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-1x1 shake">
+			<a href="https://cover.lemonstar.me/">
+				<p>Mini Cover</p>
+				<i class="fa-solid fa-screwdriver-wrench mpicon"></i>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+		<div class="span-2x1" id="mymbti">
+			<a href="https://www.16personalities.com/enfj-personality">
+				<h2>MBTI:</h2>
+				<p id="mbti"><strong>ENFJ</strong></p>
+				<p id="learnmore-text">Learn more at <br>16personalities.com</p>
+				<i class="fa-solid fa-angle-right arrows"></i>
+			</a>
+		</div>
+
+	</main>
+
+	<footer class="no-click">
+		<p>copyright &copy; <span id="footer-year"></span> Yangle & Made by <a href="https://blog.lemonstar.me" class="footer-a a-dotted" target="_blank">Yangle</a></p>
+	</footer>
+
+</div>
+
+	<script src="static/js/config.js"></script>
+	<script src="static/js/JavaScript.js" defer></script>
+</body>

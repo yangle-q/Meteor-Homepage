@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- 
+Meteor Homepage
+Copyright (C) 2026 Yangle
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see https://www.gnu.org/licenses/.
+-->
+<html>
+
+<head>
+	<script>
+    (() => {
+        const theme = localStorage.getItem('theme');
+        const html = document.documentElement;
+
+        if (theme === 'dark') {
+            html.classList.add('dark-mode');
+        } else if (theme === 'light') {
+            html.classList.remove('dark-mode');
+        }
+    })();
+	window.addEventListener("pagereveal", () => {
+    const html = document.documentElement;
+    const body = document.body;
+	});
+    </script>
+	<title>My Information | 20100807.xyz</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base target="_blank">
+	<link href="../static/css/css.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+</head>
+
+<body>
+<div class="body-page no-format">
+
+	<nav id="nav-pc">
+		<ul class="nav">
+			<li title="Home"><a href="../" target="_self"><i class="fa-solid fa-house navicon"></i><span>Home</span></a></li>
+			<li><a href="../info" target="_self"><i class="fa-solid fa-address-card navicon"></i><span>My Information</span></a></li>
+			<li><a href="../projects" target="_self"><i class="fa-solid fa-bars-progress navicon"></i><span>My Projects</span></a></li>
+			<li><a href="../message" target="_self"><i class="fa-brands fa-signal-messenger navicon"></i><span>Message Board</span></a></li>
+			<li><a href="../contact" target="_self"><i class="fa-solid fa-address-card navicon"></i><span>Contact Me</span></a></li>
+			<li><button class="no-format" id="theme-toggle"><i class="fa-solid fa-sun"></i></button></li>
+		</ul>
+	</nav>
+
+	<nav id="nav-mobile" class="no-format">
+		<div id="nav-mobile-header" class="no-format">
+
+			<div id="nav-info" class="no-click">
+				<a href="../" target="_self"><i class="fa-solid fa-house"></i></a>
+				<span>Meteor Homepage</span>
+				<li><button class="no-format" id="theme-toggle-mobile"><i class="fa-solid fa-sun"></i></button></li>
+				<i class="fa-solid fa-bars"></i>
+			</div>
+
+			<div id="nav-mobile-content" class="no-click" style="display: none;">
+				<ul>
+					<li><a href="../" target="_self"><i class="fa-solid fa-house"></i>Home<i class="fa-solid fa-angle-right"></i></a></li>
+					<li><a href="../info" target="_self"><i class="fa-solid fa-circle-info"></i>My Information<i class="fa-solid fa-angle-right"></i></a></li>
+					<li><a href="../projects" target="_self"><i class="fa-solid fa-folder"></i>My Projects<i class="fa-solid fa-angle-right"></i></a></li>
+					<li><a href="../message" target="_self"><i class="fa-solid fa-comments"></i>Message Board<i class="fa-solid fa-angle-right"></i></a></li>
+					<li><a href="../contact" target="_self"><i class="fa-solid fa-address-card"></i>Contact Me<i class="fa-solid fa-angle-right"></i></a></li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>	
+
+	<header>
+		<img src="../static/img/avatar.webp" alt="avatar" id="avatar">
+
+		<div id="bgm-card" class="infotable no-click">
+			<img class="cover-rotate cover-rotate-paused" id="music-cover" src="../static/img/music/Cover-Asahi.png">
+			<audio id="bgm" src="https://drive.lemonstar.me/raw/%E6%94%BE%E7%82%B9%E7%88%B1%E5%90%AC%E7%9A%84%E6%AD%8C/%E3%81%82%E3%81%95%E3%81%B2.mp3" loop></audio>
+			<p id="music-name">あさひ</p>
+			<p id="music-author">花譜/佐倉綾音</p>
+			<input type="range" id="music-progress" value="0" max="100">
+			<span class="music-time" id="current-time">0:00</span><span class="music-time" id="total-time">0:00</span>
+			<i class="fa-solid fa-volume-high volume-button"></i></i><i class="fa-solid fa-play play-button"></i><i class="fa-solid fa-rotate-left replay-button"></i>
+		</div>
+
+	</header>
+
+	<div class="main" id="message-main">
+		<h1 class="text-board-title" id="message-title">Welcome to my <span class="bold-color">Homepage!</span></h1>
+
+		<p>Hi there! Welcome to my personal website.🎉</p>
+
+		<p>It is my first time developing a GitHub project. As a practice exercise in Front-end development, I'm very satisfied with this product. 
+			I deem this project a great start for me in learning front-end development.</p>
+
+		<p>Indeed, this website is not my first website, or, as you may see on the "<a class="a-dotted" href="../projects" target="_self">My Projects</a>" page, I own several websites for many purposes.  But these are all websites that were developed by others, and I've only made a few customisations to them.</p>
+
+		<p><a  class="a-dotted" href="https://files.yoxo.top">This</a> website was my first time trying to develop a website from scratch, 
+			Although it is not a big deal (just a file storage page), it is a remarkable step for me.🤯</p>
+
+		<p>Turning back to this homepage -- my second from-scratch webpage, I used only HTML, CSS and JavaScript to develop it, 
+			It took me almost a year to finish it; of course, half the time I was just slacking off (forgive me lol🤣). </p>
+
+		<p>The idea of having a personal homepage came to me when I was 12, and I almost finished the layout of this website at that time. 
+			I'm soooo happy to see my dream finally come true; after three years of waiting and one year of development, I think.</p>
+
+		<p>Anyway, I enjoy the progress developing this homepage, and I hope you like it, too. Take a good look around. If you like this page,
+			please give me a star on my <a class="a-dotted" href="https://github.com/yangle-q/Meteor-Homepage" target="_blank">GitHub repository</a> or support me on <a href="https://afdian.com/a/yangle_q" class="a-dotted">Afdian☕</a>. 
+			Of course, if you want to 'appropriate' this page, you can fork it anytime you want. I'll be happy to see that. Thank you for visiting this website, 
+			Hope you have a Good time! </p>
+
+		<p>Finally, if you have any questions or suggestions, please contact me on the "<a class="a-dotted" href="../contact" target="_self">Contact Me</a>" page.
+		</p>
+
+	</div>
+
+	<footer class="no-click">
+		<p>copyright &copy;<span id="footer-year"></span> Yangle & Made by <a href="https://blog.lemonstar.me" class="footer-a a-dotted" target="_blank">Yangle</a></p>
+	</footer>
+
+</div>
+
+	<script src="../static/js/config.js"></script>
+	<script src="../static/js/JavaScript.js" defer></script>
+</body>
