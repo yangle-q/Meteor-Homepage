@@ -1649,7 +1649,7 @@ footer ~ div,
 		height: 200vh; }
 }
 
-@media  (max-width: 750px) {
+@media (pointer: coarse) and (hover: none) and (orientation: portrait) and (max-width: 750px) {
 	
 	::view-transition-old(root),
   	::view-transition-new(root) {
