@@ -364,7 +364,17 @@ function initMusicPlayer(){
     initMusicList ()
     };
 
-    //Music Time 
+    // Message Page Music src
+
+    if (bgmCard) {
+        const currentIndex = 0
+        audio.src = musicList[currentIndex].src
+        document.getElementById("music-name").textContent = musicList[currentIndex].title
+        document.getElementById("music-author").textContent = musicList[currentIndex].artist
+        document.getElementById("music-cover").src = musicList[currentIndex].coverVinyl
+    }
+
+    // Music Time 
     function culMin (second) {
         if (isNaN(second) || second === undefined) return "0:00"; 
         const Min = Math.floor(second / 60) + ":" + String(Math.floor(second) %60).padStart(2, '0');
