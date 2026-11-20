@@ -1,0 +1,15 @@
+git switch demo
+git add .
+git commit -m "demo: "
+git push origin demo
+
+git switch main
+git fetch origin
+git reset --hard origin/demo
+
+删掉统计脚本（5个html）
+<script defer src="https://umami.yoxo.top/script.js" data-website-id="..."></script>
+
+git add .
+git commit -m "chore: "
+git push --force-with-lease origin main
