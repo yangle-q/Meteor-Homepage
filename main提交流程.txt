@@ -7,8 +7,7 @@ git switch main
 git fetch origin
 git reset --hard origin/demo
 
-删掉统计脚本（5个html）
-<script defer src="https://umami.yoxo.top/script.js" data-website-id="..."></script>
+删掉统计脚本（清空analytics.js）
 
 git add .
 git commit -m "chore: "
