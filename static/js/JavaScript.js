@@ -598,7 +598,7 @@ function initTimeBoard (){
 
 // Contact Page Statistic
 
-const startDate = new Date(2026, 10, 16)
+const startDate = new Date(2026, 10, 19)
 const now = new Date()
 const runningDays = Math.floor((now - startDate) / (1000 * 60 * 60 * 24)) +1
 const runningDaysEl =document.getElementById("running-days")

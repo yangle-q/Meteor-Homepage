@@ -29,7 +29,7 @@ const musicList = [
     {
         title: "老人と海",
         artist: "ヨルシカ",
-        cover: "static/img/music/Cover-Roujintoumi.jpg",
+        cover: "static/img/music/Cover-roujintoumi.jpg",
         src: "https://drive.lemonstar.me/raw/%E6%94%BE%E7%82%B9%E7%88%B1%E5%90%AC%E7%9A%84%E6%AD%8C/%E8%80%81%E4%BA%BA%E3%81%A8%E6%B5%B7.mp3"
     }
 ]
