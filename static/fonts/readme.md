@@ -4,13 +4,13 @@ To ensure the speed of the website, the actual fonts used below are compressed:
 
 MiSans-Semibold: Only Numbers, punctuation and letters are reserved.
 
-Yozai-Medium: Only Hiragana, Katakana and Japanese Kanji remain.
+Yozai-Medium: Only contains Hiraganas, Katakanas and Japanese Kanjis.
 
-zcool-yuyang-w03: Only contains 3500 most commonly used Chinese Characters, punctuation and letters
+zcool-yuyang-w03: Only contains 3500 most commonly used Chinese Characters, punctuation and letters.
 
-To get the full font file, see [ttf folder](/ttf)
+To get the full font file, see [ttf folder](static/fonts/ttf).
 
-If other languages or fonts are necessary, please put the font file here, and import it in the @font-face part of the [css](../css/css.css) file.
+If other languages or fonts are necessary, please put the font file here, and import it in the @font-face part of the [css](static/css/css.css) file.
 
 ## 字体说明
 
@@ -24,4 +24,4 @@ zcool-yuyang-w03：仅保留3500个常用汉字与标点，字母
 
 如需完整字体文件，见[ttf 文件夹](/ttf)
 
-如需其他语言或字体，请将字体放入此文件夹（推荐压缩为woff2格式），并在[css文件](../css/css.css)的@font-face中引入。
+如需其他语言或字体，请将字体放入此文件夹（推荐压缩为woff2格式），并在[css文件](static/css/css.css)的@font-face中引入。

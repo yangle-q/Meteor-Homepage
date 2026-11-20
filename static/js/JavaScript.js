@@ -14,6 +14,19 @@
 //You should have received a copy of the GNU Affero General Public License
 //along with this program.  If not, see https://www.gnu.org/licenses/.
 
+// General Variables
+
+const birthday = new Date(2010, 7 ,7) 
+// Your Birthday, uesd to calculate your age. NOTE: JavaScript months are zero-based, so substract 1 from your birth month. e.g: if you born in March, use 2
+// 您的生日，用于计算年龄。注意：JavaSpcipt的月份开始于0月，所以此处应填您的出生月份 - 1。如：如您出生在三月，您应填2。
+const statisticAPI = "https://umapi-2.yoxo.top/"
+// Your statistic API, Please use this with your own.
+// 您的统计数据API，请更换为您自己的
+const startDate = new Date(2026, 10, 19)
+// The Date your website went live, remember to substract 1 from the month.
+// 您的网站开始运行的时间，确保月份等于实际月份 - 1
+
+
 // General Functions
 
 function ViewTransition (updateDOM) {
@@ -122,9 +135,8 @@ if (faBars && navMobileContent) {
 // Age Calculate
 
 function calculateAge () {
-    const infoPage = document.getElementById('info-main')
-    if (!infoPage) return;
-    const birthday = new Date(2010, 7 ,7)
+    const ageEl = document.getElementById('age')
+    if (!ageEl) return;
     const now = new Date()
     let age = now.getFullYear() - birthday.getFullYear()
     const birthdayHasPassed =
@@ -134,7 +146,7 @@ function calculateAge () {
     if (!birthdayHasPassed) {
         age--;
     }
-    document.getElementById('age').textContent = 'Age : ' + age;
+    ageEl.textContent = 'Age : ' + age;
 }
 
 // Page Restoration After Resizing
@@ -608,7 +620,6 @@ function initTimeBoard (){
 
 // Contact Page Statistic
 
-const startDate = new Date(2026, 10, 19)
 const now = new Date()
 const runningDays = Math.floor((now - startDate) / (1000 * 60 * 60 * 24)) +1
 const runningDaysEl =document.getElementById("running-days")
@@ -621,7 +632,7 @@ if (runningDaysEl || visitorsEl) {
 
     async function initUmamiStats() {
         try {
-            const umapi = await fetch(`https://umapi-2.yoxo.top/`)
+            const umapi = await fetch(statisticAPI)
             if (!umapi.ok) { 
                 throw new Error(`HTTP 错误：${umapi.status}`); 
             };
@@ -668,7 +679,7 @@ projectWrapEl.forEach( wrap => {
 
 // Footer Years Update
 const thisYear = new Date().getFullYear()
-const startYear = 2026
+const startYear = startDate.getFullYear()
 const footerYearEl = document.querySelectorAll("#footer-year")
 
 if (footerYearEl.length > 0){

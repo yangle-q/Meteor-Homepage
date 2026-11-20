@@ -13,6 +13,9 @@
 //
 //You should have received a copy of the GNU Affero General Public License
 //along with this program.  If not, see https://www.gnu.org/licenses/.
+
+// Music Config, if you want to add a new song, please ensure the resourse of the sone could be played directly. Please ensure the every item has its own following comma except for the last one.
+//  歌曲配置，如需新加请使用可直接播放的歌曲来源，请确保除了最后一项外每项都有逗号
 const musicList = [
     {
         title: "あさひ",

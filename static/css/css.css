@@ -111,10 +111,11 @@ along with this program.  If not, see https://www.gnu.org/licenses/.
 	--svg-color: #6587B8;
 	--text-background: rgba(70, 70, 70, .25);
     --mpicon-opacity: 0.3;
-	--background-photo: url('../img/backgrounds/background-2.webp'); /*2，3，6，9*/
+	--background-photo: url('../img/backgrounds/background-3.webp'); /* Light Mode: Use background-1 through background-10.webp | 浅色模式可用 background-1 ~ background-10.webp */
 	--music-progress-color: #000b;
 	--music-progress-color-hover: #000;
-	--music-progress-background: rgba(0, 0, 0, 0.2); }
+	--music-progress-background: rgba(0, 0, 0, 0.2);
+	--mbti-color: #267A56; }
 	
 
 html.dark-mode {
@@ -123,10 +124,11 @@ html.dark-mode {
 	--svg-color: #f5f5dc;
 	--text-background: rgba(250, 250, 250, 0.5);
 	--mpicon-opacity: 0.4;
-	--background-photo: url('../img/backgrounds/background-17.webp');
+	--background-photo: url('../img/backgrounds/background-17.webp'); /* Dark Mode: Use background-11 through background-20.webp | 深色模式可用 background-11 ~ background-20.webp */
 	--music-progress-color: #fffc;
 	--music-progress-color-hover: #fff;
-	--music-progress-background: rgba(255, 255, 255, 0.55); }
+	--music-progress-background: rgba(255, 255, 255, 0.55);
+	--mbti-color: #267A56; /* Your MBTI theme color | 你的 MBTI 主题色 */ }
 
 
 html, body {
@@ -636,7 +638,7 @@ html.dark-mode .bold-color-reverse {
 	position: relative;
 	bottom: 74px;
 	left: 60px;
-	color: #267A56; }
+	color: var(--mbti-color); }
 
 #learnmore-text {
 	position: relative;
@@ -1269,7 +1271,7 @@ html.dark-mode .bold-color-reverse {
 #project-set-1 {
 	margin-top: -40px !important; }
 
-/* scroolbar */
+/* scrollbar */
 
 ::-webkit-scrollbar {
 	height: 7px;
@@ -1647,7 +1649,7 @@ footer ~ div,
 		height: 200vh; }
 }
 
-@media (pointer: coarse) and (hover: none) and (orientation: portrait) and (max-width: 750px) {
+@media  (max-width: 750px) {
 	
 	::view-transition-old(root),
   	::view-transition-new(root) {
@@ -1742,8 +1744,8 @@ footer ~ div,
 
 	/* grid layout setup */
 	.span-4x1 {
-		grid-column: span 3; /*max 3*/
-		grid-row: span 1; } /*max 6*/
+		grid-column: span 3; /* maximum is 3 columns */
+		grid-row: span 1; } /* maximum of 6 row */
 
 	.span-4x2 {
 		grid-column: span 3;

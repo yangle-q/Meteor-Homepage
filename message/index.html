@@ -70,7 +70,7 @@ along with this program.  If not, see https://www.gnu.org/licenses/.
 				<i class="fa-solid fa-bars"></i>
 			</div>
 
-			<div id="nav-mobile-content" class="no-click" style="display: none;">
+			<div id="nav-mobile-content" class="no-click"> <!-- Mobile Navigation Bar | 移动端导航栏 -->
 				<ul>
 					<li><a href="../" target="_self"><i class="fa-solid fa-house"></i>Home<i class="fa-solid fa-angle-right"></i></a></li>
 					<li><a href="../info" target="_self"><i class="fa-solid fa-circle-info"></i>My Information<i class="fa-solid fa-angle-right"></i></a></li>
@@ -87,10 +87,10 @@ along with this program.  If not, see https://www.gnu.org/licenses/.
 		<img src="../static/img/avatar.webp" alt="avatar" id="avatar">
 
 		<div id="bgm-card" class="infotable no-click">
-			<img class="cover-rotate cover-rotate-paused" id="music-cover" src="../static/img/music/Cover-Asahi.png">
-			<audio id="bgm" src="https://drive.lemonstar.me/raw/%E6%94%BE%E7%82%B9%E7%88%B1%E5%90%AC%E7%9A%84%E6%AD%8C/%E3%81%82%E3%81%95%E3%81%B2.mp3" loop></audio>
-			<p id="music-name">あさひ</p>
-			<p id="music-author">花譜/佐倉綾音</p>
+			<img class="cover-rotate cover-rotate-paused" id="music-cover" src="../static/img/music/Cover-Asahi.png"> <!-- This is a placeholder, please change the music in config.js; Default use the image specified by the coverVinyl property of the first song in the config file | 占位符，请到config.js中更改实际歌曲；默认使用配置中的第一首歌的 coverVinyl 属性指定的图片-->
+			<audio id="bgm" src="https://drive.lemonstar.me/raw/%E6%94%BE%E7%82%B9%E7%88%B1%E5%90%AC%E7%9A%84%E6%AD%8C/%E3%81%82%E3%81%95%E3%81%B2.mp3" loop></audio> <!-- This is a placeholder, please change the music in config.js; Defult use the first song in the config file | 占位符，请到config.js中更改实际歌曲；默认使用配置中的第一首歌-->
+			<p id="music-name">あさひ</p> <!-- This is a placeholder, please change the music in config.js; By default use the first song in the config file is used | 占位符，请到config.js中更改实际歌曲；默认使用配置中的第一首歌-->
+			<p id="music-author">花譜/佐倉綾音</p> <!-- This is a placeholder, please change the music in config.js; By default use the first song in the config file is used | 占位符，请到config.js中更改实际歌曲；默认使用配置中的第一首歌-->
 			<input type="range" id="music-progress" value="0" max="100">
 			<span class="music-time" id="current-time">0:00</span><span class="music-time" id="total-time">0:00</span>
 			<i class="fa-solid fa-volume-high volume-button"></i></i><i class="fa-solid fa-play play-button"></i><i class="fa-solid fa-rotate-left replay-button"></i>
