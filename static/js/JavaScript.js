@@ -16,6 +16,8 @@
 
 // General Variables
 
+// Requires Customize | 需要修改
+
 const birthday = new Date(2010, 7 ,7) 
 // Your Birthday, uesd to calculate your age. NOTE: JavaScript months are zero-based, so substract 1 from your birth month. e.g: if you born in March, use 2
 // 您的生日，用于计算年龄。注意：JavaSpcipt的月份开始于0月，所以此处应填您的出生月份 - 1。如：如您出生在三月，您应填2。
@@ -25,6 +27,8 @@ const statisticAPI = "https://umapi-2.yoxo.top/"
 const startDate = new Date(2026, 10, 19)
 // The Date your website went live, remember to substract 1 from the month.
 // 您的网站开始运行的时间，确保月份等于实际月份 - 1
+
+// Requires Customize END | 需要修改部分结束
 
 
 // General Functions
