@@ -1,45 +1,46 @@
 <div align="center">
 	<h1>Meteor Homepage</h1>
-	<p>An elegant, customizable personal homepage.</p>
-	<p>一个优雅简洁，可自定义的个人主页项目</p>
+	<p>A creative, customizable personal homepage.</p>
+	<p>一款创意型的，可自定义的个人主页项目</p>
 	<p><a href="README.md" >English</a> / 简体中文</p>
+	<p align="center">
+  <img src="https://img.shields.io/github/stars/yangle-q/Meteor-Homepage?style=flat" />
+  <img src="https://img.shields.io/github/forks/yangle-q/Meteor-Homepage?style=flat" />
+  <img src="https://img.shields.io/github/license/yangle-q/Meteor-Homepage?style=flat" />
+  <img src="https://img.shields.io/github/last-commit/yangle-q/Meteor-Homepage?style=flat" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/languages/top/yangle-q/Meteor-Homepage" />
+  <img src="https://img.shields.io/github/repo-size/yangle-q/Meteor-Homepage" />
+  <img src="https://img.shields.io/github/issues/yangle-q/Meteor-Homepage" />
+</p>
 </div>
 
 # 预览
 
-![三端预览](https://pic-2.yoxo.top/Snipaste_2026-11-20_19-35-48.webp)
-![浅色模式](https://pic-2.yoxo.top/Snipaste_2026-11-20_19-37-29.webp)
-![深色模式](https://pic-2.yoxo.top/Snipaste_2026-11-20_19-38-22.webp)
+![三端预览](static/img/demo/Snipaste_2026-11-20_19-35-48.png)
+![浅色模式](static/img/demo/Snipaste_2026-11-20_19-37-29.png)
+![深色模式](static/img/demo/Snipaste_2026-11-20_19-38-22.png)
 
-# 介绍
-
-Meteor Homepage 是一款创意型的个人主页，使用多页式结构，一键部署，无需复杂环境。
-
-界面优雅美观，定制自由度高，深浅色模式完美适配，响应式布局，适配桌面和移动设备。
-
-# 使用方法
-
-1. Fork此仓库到您的账号
-2. 在线或本地修改文件
-3. 部署到网页托管网站
 
 # 功能特点
 
-- 响应式布局，适配桌面和移动设备
+- 响应式布局
 
 - 独特状态圈设计
 
-- 天气信息与时间与日期显示
-
 - 原生音乐播放器
 
-- 毛玻璃卡片
+- 毛玻璃视觉效果
 
-- 便当盒布局
+- Bento Box 网页布局
 
-- 多页面个人主页，可容纳多个个人项目与自我介绍
+- 多页面个人主页
 
-- 纯 HTML、CSS 和 JavaScript，无需复杂构建环境
+- 支持 Vercel 一键部署
+
+# 使用指南
 
 ## 本地文件修改指南
 
@@ -69,7 +70,7 @@ Meteor Homepage 是一款创意型的个人主页，使用多页式结构，一�
 
 每个html文件的body中：
 
-[示例](index.html#L38)
+[示例](index.html#L87)
 
 ```html
 <header>
@@ -101,7 +102,7 @@ Meteor Homepage 是一款创意型的个人主页，使用多页式结构，一�
 
 可选修改：
 
-[整个文件](static/js/config.js)（音乐信息）
+[整个文件](static/js/config.js)（音乐封面，歌手及播放地址）
 
 （行号有可能变化，请以实际为准）
 
@@ -124,7 +125,9 @@ class="span-1x1"
 
 请注意排版，避免格子超出可用范围。
 
-## 图标动画指南
+## 视觉效果指南
+
+### 图标动画指南
 
 本项目使用font awesome提供的12个免费动画，均为鼠标悬浮时生效。
 
@@ -165,7 +168,7 @@ class="fade"
 </div>
 ```
 
-## 图标指南
+### 图标指南
 
 本项目使用[Font Awesome](https://fontawesome.com/)图标库，已提前引入，可直接使用。
 
@@ -180,21 +183,31 @@ e.g:
 <i class="fa-solid fa-blog"></i>
 ```
 
+## 天气服务说明
+
+本项目使用 [Open-Meteo](https://open-meteo.com) 提供天气数据，并根据用户的 IP 地址获取大致地理位置。由于IP定位存在一定误差，天气显示可能与实际所在地不完全一致，仅供参考。
+
+相关代码在JavaScript文件的[576~618行](static/js/JavaScript.js#L576-L618)
+
 ## 部署指南
 
 ### 1.Vercel 一键部署
 
-1. Fork此仓库到自己账号
-2. 修改文件与样式
-3. 点击下键一键部署
-4. 绑定域名
+1. 点击下键一键部署
+	[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yangle-q/Meteor-Homepage)
+2. 找到 Vercel 自动导入到您的账号的仓库，并修改文件与样式
+3. 保存后，Vercel会自动重新部署
+4. 绑定您自己的域名
 
-### 2.Cloudflare Pages 部署
+### 2.Cloudflare Pages
 
-1. Fork此仓库到自己账号
+1. Fork此仓库到您的账号
 2. 修改文件与样式
-3. 点击下键一键部署
-4. 绑定域名
+3. 打开[Cloudflare Dashboard](https://dash.cloudflare.com/)
+4. 导航至 Workers & Pages → Create application → Pages
+5. 绑定您的 Github 账户并选择您Fork的仓库
+6. 检查并部署项目
+7. 绑定您自己的域名
 
 ### 3.自有服务器
 
@@ -232,3 +245,11 @@ Meteor-Homepage/<br>
 ├── README.md<br>
 ├── .gitignore<br>
 └── LICENSE<br>
+
+# 许可证
+
+本项目采用 GNU Affero 通用公共许可证第 3 版（AGPL-3.0） 授权。
+
+您可以自由使用、修改、分发和部署本项目，包括将其用于商业用途，但须遵守本许可证的相关条款。
+
+对于本项目的修改版本及衍生作品，在分发时须遵守 AGPL-3.0 的相关要求。如果您修改本项目并通过网络向用户提供交互服务，还须按照许可证第 13 条的规定，向这些用户提供所运行版本对应的源代码。

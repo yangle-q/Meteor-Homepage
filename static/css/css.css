@@ -750,6 +750,10 @@ html.dark-mode .bold-color-reverse {
 	width: 16px;
 	margin-right: 12px; }
 
+#nav-info span a {
+	width: fit-content;
+	height: fit-content; }
+
 #nav-info .fa-bars {
 	margin-left: auto;
 	margin-left: 12px;

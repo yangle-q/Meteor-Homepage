@@ -26,7 +26,7 @@ const statisticAPI = "https://umapi-2.yoxo.top/"
 // 您的统计数据API，请更换为您自己的
 const startDate = new Date(2026, 10, 19)
 // The Date your website went live, remember to substract 1 from the month.
-// 您的网站开始运行的时间，确保月份等于实际月份 - 1
+// 您的网站开始运行的时间，确保已从实际月份中减 1。
 
 // Requires Customize END | 需要修改部分结束
 
