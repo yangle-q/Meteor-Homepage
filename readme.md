@@ -194,6 +194,7 @@ e.g:
 ### 1.Vercel 一键部署
 
 1. 点击下键一键部署
+	
 	[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yangle-q/Meteor-Homepage)
 2. 找到 Vercel 自动导入到您的账号的仓库，并修改文件与样式
 3. 保存后，Vercel会自动重新部署
@@ -232,19 +233,21 @@ e.g:
 
 # 文件结构
 
-Meteor-Homepage/<br>
-├── index.html<br>
-├── contact/<br>
-├── info/<br>
-├── message/<br>
-├── projects/<br>
-├── static/<br>
-│   ├── css/<br>
-│   ├── js/<br>
-│   └── img/<br>
-├── README.md<br>
-├── .gitignore<br>
-└── LICENSE<br>
+```md
+Meteor-Homepage/
+├── index.html
+├── contact/
+├── info/
+├── message/
+├── projects/
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── img/
+├── README.md
+├── .gitignore
+└── LICENSE
+```
 
 # 许可证
 
