@@ -192,7 +192,7 @@ main > div:not(#top-bar):hover {
 
 main a {
 	overflow-wrap: break-word;
-}
+	font-size: 15px; }
 
 main a:active {
 	transform: none !important;
@@ -644,7 +644,9 @@ html.dark-mode .bold-color-reverse {
 	font-size: 1.02em; }
 
 #mymbti {
-	padding-left: 15px;
+	padding-left: 15px; }
+
+#mymbti a {
 	font-size: 11px; }
 
 #mbti {
@@ -1597,6 +1599,11 @@ footer ~ div,
 	#weather-text {
 		display: none;
 	}
+}
+
+@media (min-width: 1030px) and (max-width: 1220px), (max-width: 880px) {
+	main a {
+		font-size: 14px; }
 }
 
 @media (max-width: 1030px) {

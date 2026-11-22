@@ -1,8 +1,7 @@
 <div align="center">
 	<h1>Meteor Homepage</h1>
 	<p>A creative, customizable personal homepage.</p>
-	<p>一款创意型的，可自定义的个人主页项目</p>
-	<p><a href="README.md" >English</a> / 简体中文</p>
+	<p>English / <a href="README_cn.md" >简体中文</a></p>
 	<p align="center">
   <img src="https://img.shields.io/github/stars/yangle-q/Meteor-Homepage?style=flat" />
   <img src="https://img.shields.io/github/forks/yangle-q/Meteor-Homepage?style=flat" />
@@ -17,164 +16,168 @@
 </p>
 </div>
 
-# 预览
+# Preview
 
-![三端预览](static/img/demo/Snipaste_2026-11-20_19-35-48.png)
-![浅色模式](static/img/demo/Snipaste_2026-11-20_19-37-29.png)
-![深色模式](static/img/demo/Snipaste_2026-11-20_19-38-22.png)
+![Three-terminal](static/img/demo/Snipaste_2026-11-20_19-35-48.png)
+![Light Mode](static/img/demo/Snipaste_2026-11-20_19-37-29.png)
+![Dark Mode](static/img/demo/Snipaste_2026-11-20_19-38-22.png)
 
+# Features
 
-# 功能特点
+- Responsive Webpage
 
-- 响应式布局
+- Unique Status Circle
 
-- 独特状态圈设计
+- Music Player
 
-- 原生音乐播放器
+- Glassmorphism Effect
 
-- 毛玻璃视觉效果
+- Bento Box Layout
 
-- Bento Box 网页布局
+- Multi-page Personal Homepage
 
-- 多页面个人主页
+- Vercel One-click Deployment Support
 
-- 支持 Vercel 一键部署
+# User Guide
 
-# 使用指南
-
-## 本地文件修改指南
+## Guide to Customise
 
 ### index.html
 
-#### 网站title
+#### Website title
 
-每个html文件的head中：
+In the `<head>` part of every HTML file:
 
-[示例](index.html#L35)
+[Example](index.html#L35)
 
 ```html
 <title>Yangle's Homepage | 20100807.xyz</title>
 ```
 
-#### 网站图标
+#### Website Icon
 
-每个html文件的head中：
+In the `<head>` part of every HTML file:
 
-[示例](index.html#L38)
+[Example](index.html#L38)
 
 ```html
 <link rel="icon" href="/static/img/favicon.webp">
 ```
 
-#### 个人头像
+#### Profile Photo
 
-每个html文件的body中：
+In the `<body>` part of every HTML file:
 
-[示例](index.html#L87)
+[Example](index.html#L87)
 
 ```html
 <header>
 	<img src="static/img/avatar.webp" alt="avatar" id="avatar">
 </header>
 ```
+
 ### JavaScript.js 
 
-建议修改：[19 ~ 31 行](static/js/JavaScript.js#L19-L31)
+Recommended customisation:
 
-可选修改：
-+ [199 行](static/js/JavaScript.js#L199)（默认音量档位）
-+ [440 行 至 460 行](static/js/JavaScript.js#L440-L460)（天气代码对应的文字和图标）
-+ [534 行 至 546 行](static/js/JavaScript.js#L534-L546)（问候语）
-+ [576 行 至 623 行](static/js/JavaScript.js#L576-L623)（天气定位和服务依赖逻辑）
+[Line 19 ~ 31](static/js/JavaScript.js#L19-L31)
+
+Optional:
+
++ [Line 199](static/js/JavaScript.js#L199) (Default Volume Tier)
++ [Lines 440 to 460](static/js/JavaScript.js#L440-L460) (The Phases and emojis corresponding to the Weather code)
++ [Lines 534 to 546](static/js/JavaScript.js#L534-L546) (Greetings)
++ [Lines 576 to 623](static/js/JavaScript.js#L576-L623) (Positioning and weather service)
 
 ### css.css 
 
-建议修改：
-[21 ~ 41 行](static/css/css.css#L21-L41)（包括背景图像）
+Recommended customisation:
 
-可选修改：
-+ [43 ~ 66 行](static/css/css.css#L43-L66)（字体）
-+ [522 ~ 570 行](static/css/css.css#L522-L570)（特别文字颜色）
-+ [1312 ~ 1331 行](static/css/css.css#L1312-L1331)（玻璃效果）
-+ [1413 ~ 1513 行](static/css/css.css#L1413-L1513)（图标动画基础设定）
+[Lines 21 to 41](static/css/css.css#L21-L41) (Including background image)
+
+Optional:
+
++ [Lines 43 to 66](static/css/css.css#L43-L66) (Fonts)
++ [Lines 522 to 570](static/css/css.css#L522-L570) (Colors of special words)
++ [Lines 1318 to 1337](static/css/css.css#L1318-L1337) (Glassmorphism Effect)
++ [Lines 1419 to 1519](static/css/css.css#L1419-L1519) (Basic Icon animation settings)
 
 ### config.js 
 
-可选修改：
+Optional:
 
-[整个文件](static/js/config.js)（音乐封面，歌手及播放地址）
+[The Whole File](static/js/config.js) (Cover art, author and music source URL)
 
-（行号有可能变化，请以实际为准）
+(Line numbers could change; please refer to the actual file.)
 
-## 便当盒布局指南
+## Guide to Bento Box Layout
 
-本项目首页采用便当盒布局（Bento Box Layout），可供使用的空间为6\*3格，支持的最大单格为6\*3格。
+The project's homepage uses Bento Box Layout. The homepage use a 6\*3 grid, with induvidual cards supporting size up to 6\*3.
 
-要应用格子大小到卡片，在[卡片](index.html#L220-L310)的类名中添加：
+To apply size to cards, set the class name on the [cards](index.html#L220-L310) in index.html:
+
 ```html
 class="span-1x1"
 ```
-第一个数是行，第二个数是列。最大支持`span-6x3`。
 
-示例：
+The first number is columns, and the second one is rows. The largest supported card size is 6\*3.
+
+e.g:
 ```html
 <div class="span-2x1">
-你的格子内容
+Your card contents
 </div>
 ```
 
-请注意排版，避免格子超出可用范围。
+Be sure to check the layout for overflow.
 
-## 视觉效果指南
+## Guide to Visual Effects
 
-### 图标动画指南
+### Guide to icon animations
 
-本项目使用font awesome提供的12个免费动画，均为鼠标悬浮时生效。
+This project uses 12 free Icon animations provided by Font Awesome. They take effect when the mouse hovers over the card.
 
-要应用动画大小到图标，在[卡片](index.html#L220-L310)的类名中添加：
-```html
-class="fade"
-```
-
-可用动画有：
-
-- spin（旋转）
-
-- fade（闪烁）
-
-- shake（晃动）
-
-- bounce（弹跳）
-
-- flip（翻转）
-
-- flip-360（360度翻转）
-
-- flip-360-vertical（360度垂直翻转）
-
-- beat（放大缩小）
-
-- jello（果冻）
-
-- beat-fade（放大缩小同时闪烁）
-
-- buzz（振动）
-
-- float（漂浮）
+To apply the animation to Icons, add the class name to the [cards](index.html#L220-L310) in index.html:
 
 ```html
-<div class="span-2x1 jello">
-你的格子内容
+<div class="span-2x1 fade">
+Your card contents
 </div>
 ```
 
-### 图标指南
+The usable animations are:
 
-本项目使用[Font Awesome](https://fontawesome.com/)图标库，已提前引入，可直接使用。
+- spin
 
-使用方法：
+- fade
+
+- shake
+
+- bounce
+
+- flip
+
+- flip-360
+
+- flip-360-vertical
+
+- beat
+
+- jello
+
+- beat-fade
+
+- buzz
+
+- float
+
+### Guide to Icons 
+
+This project uses Icons from the [Font Awesome](https://fontawesome.com/) Icon library. Since it is already imported, you can use it directly.
+
+Usage:
 ``` html
-<i class="fa-图标类 fa-图标名称"></i>
+<i class="fa-<icon class> fa-<icon name>"></i>
 ```
 
 e.g:
@@ -183,55 +186,66 @@ e.g:
 <i class="fa-solid fa-blog"></i>
 ```
 
-## 天气服务说明
+## Explanation of Weather Service
 
-本项目使用 [Open-Meteo](https://open-meteo.com) 提供天气数据，并根据用户的 IP 地址获取大致地理位置。由于IP定位存在一定误差，天气显示可能与实际所在地不完全一致，仅供参考。
+This project uses [Open-Meteo](https://open-meteo.com) as the source of weather data and uses the user's IP address to determine the approximate position. IP-based geolocation may be inaccurate, so the displayed weather may differ from your actual location; Weather information is provided for reference only.
 
-相关代码在JavaScript文件的[576~618行](static/js/JavaScript.js#L576-L618)
+The relevant code is at [Line 576~618](static/js/JavaScript.js#L576-L618) of `JavaScript.js`.
 
-## 部署指南
+## Guide to Deployment
 
-### 1.Vercel 一键部署
+### 1. Vercel One-click Deployment
 
-1. 点击下键一键部署
-	
-	[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yangle-q/Meteor-Homepage)
-2. 找到 Vercel 自动导入到您的账号的仓库，并修改文件与样式
-3. 保存后，Vercel会自动重新部署
-4. 绑定您自己的域名
+1. Click the button below to deploy:
 
-### 2.Cloudflare Pages
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yangle-q/Meteor-Homepage)
 
-1. Fork此仓库到您的账号
-2. 修改文件与样式
-3. 打开[Cloudflare Dashboard](https://dash.cloudflare.com/)
-4. 导航至 Workers & Pages → Create application → Pages
-5. 绑定您的 Github 账户并选择您Fork的仓库
-6. 检查并部署项目
-7. 绑定您自己的域名
+2. Open the repository cloned to your GitHub and customise files and layouts.
 
-### 3.自有服务器
+3. After saving, redeployment will be triggered automatically.
 
-1. 克隆项目到本地
-	```bash
+4. Bind it to your domain.
+
+### 2. Cloudflare Pages
+
+1. Fork this repository to your account.
+
+2. Customise files and layouts.
+
+3. Open [Cloudflare Dashboard](https://dash.cloudflare.com/)
+
+4. Navigate to Workers & Pages → Create application → Pages
+
+5. Bind to your GitHub account and choose the repository you forked 
+
+6. Check and deploy the project.
+
+7. Bind it to your domain.
+
+### 3. Self-hosted Deployment
+
+1. Clone this project to your computer:
+    ```bash
 	git clone https://github.com/yangle-q/Meteor-Homepage.git
 	cd Meteor-Homepage
 	```
-2. 修改文件并启动python服务器查看
-	```python
+
+2. Modify the Files and launch the Python preview server:
+    ```python
 	python -m http.server 8000
 	```
-3. 上传到服务器，绑定域名
 
-# 外部资源
+3. Upload to the server and bind it to your domain.
 
-图标库：[Font Awesome](https://fontawesome.com/)
+# External Resources
 
-# 在线预览
+Icon library: [Font Awesome](https://fontawesome.com/)
 
-[访问 Meteor Homepage](https://20100807.xyz)
+# Online Preview
 
-# 文件结构
+[Visit Meteor Homepage](https://20100807.xyz)
+
+# Repository Structure
 
 ```md
 Meteor-Homepage/
@@ -249,10 +263,10 @@ Meteor-Homepage/
 └── LICENSE
 ```
 
-# 许可证
+# License
 
-本项目采用 GNU Affero 通用公共许可证第 3 版（AGPL-3.0） 授权。
+Meteor Homepage is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](LICENSE).
 
-您可以自由使用、修改、分发和部署本项目，包括将其用于商业用途，但须遵守本许可证的相关条款。
+You are free to use, modify, distribute, and deploy this project, including for commercial purposes, provided that you comply with the license terms.
 
-对于本项目的修改版本及衍生作品，在分发时须遵守 AGPL-3.0 的相关要求。如果您修改本项目并通过网络向用户提供交互服务，还须按照许可证第 13 条的规定，向这些用户提供所运行版本对应的源代码。
+Modified versions and derivative works must remain under the AGPL-3.0 license when distributed. If you modify the project and make it available for remote network interaction, you must also provide users with access to the corresponding source code, as required by Section 13 of the license.
