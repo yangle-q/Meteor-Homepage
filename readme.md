@@ -18,9 +18,9 @@
 
 # Preview
 
-![Three-terminal](static/img/demo/Snipaste_2026-11-20_19-35-48.png)
-![Light Mode](static/img/demo/Snipaste_2026-11-20_19-37-29.png)
-![Dark Mode](static/img/demo/Snipaste_2026-11-20_19-38-22.png)
+![Three-terminal](static/img/demo/three-terminal.webp)
+![Light Mode](static/img/demo/light-mode.webp)
+![Dark Mode](static/img/demo/dark-mode.webp)
 
 # Features
 
