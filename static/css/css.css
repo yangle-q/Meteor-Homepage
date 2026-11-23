@@ -16,7 +16,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see https://www.gnu.org/licenses/.
 */
 
-/* Custommizable basic styles | 可自定义基本样式 */
+/* Customizable basic styles | 可自定义基本样式 */
 
 :root {
 	--background-photo: url('../img/backgrounds/background-3.webp'); 
@@ -38,7 +38,7 @@ html.dark-mode {
 	--mpicon-opacity: 0.4; /* Bento box icon opacity - Dark | 便当盒图标透明度 - 深色 */
 }
 
-/* Custommizable basic styles END | 可自定义基本样式结束 */
+/* Customizable basic styles END | 可自定义基本样式结束 */
 
 @font-face {
   	font-family: 'Ubuntu';

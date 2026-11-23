@@ -16,19 +16,19 @@
 
 // General Variables
 
-// Requires Customize | 需要修改
+// Requires Customise | 需要修改
 
 const birthday = new Date(2010, 7 ,7) 
-// Your Birthday, uesd to calculate your age. NOTE: JavaScript months are zero-based, so substract 1 from your birth month. e.g: if you born in March, use 2
+// Your Birthday, used to calculate your age. NOTE: JavaScript months are zero-based, so subtract 1 from your birth month. e.g: if you were born in March, use 2
 // 您的生日，用于计算年龄。注意：JavaSpcipt的月份开始于0月，所以此处应填您的出生月份 - 1。如：如您出生在三月，您应填2。
 const statisticAPI = "https://umapi-2.yoxo.top/"
-// Your statistic API, Please use this with your own.
+// Your statistics API, Please use your own.
 // 您的统计数据API，请更换为您自己的
 const startDate = new Date(2026, 10, 19)
-// The Date your website went live, remember to substract 1 from the month.
+// The Date your website went live, remember to subtract 1 from the month.
 // 您的网站开始运行的时间，确保已从实际月份中减 1。
 
-// Requires Customize END | 需要修改部分结束
+// Requires Customise END | 需要修改部分结束
 
 
 // General Functions
@@ -172,7 +172,7 @@ window.addEventListener('resize', function() {
 // Message Page Music Board
 
 function initMusicPlayer(){
-    //In Case of Music Mudule Inexist
+    //In Case of Music Module Inexist
     const bgmCard = document.querySelectorAll("#bgm-card, #music-page")
     if (!bgmCard.length) return
 
@@ -460,7 +460,7 @@ function initTimeBoard (){
         95: {text:"Storm", emoji: "⛈️"}
     }
 
-    //In Case of Time Mudule Inexist
+    //In Case of Time Module Inexist
     if (!TimePage) return
 
     //Shift to Time Page
